@@ -1,27 +1,25 @@
 # SES Interview Project
-
-After setup file structure should look as follows:
-Root
-├── frontend
-│   ├── app/
-│   ├── assets/
-│   ├── main.ts
-│   ├── index.html
-│   ├── styles.css
-│   ├── favicon.ico
-├── backend
-│   ├── models.py
-│   ├── app.py
-│   ├── .env
-│   ├── db_setup.sql
-│   ├── db_cleanup.sql
-│   ├── Earthquakes.geojson
-├── node_modules/
-├── angular.json
-├── tsconfig.json
-├── tsconfig.spec.json
-├── tsconfig.app.json
-└── package.json
+      root
+      ├── frontend
+      │   ├── app/
+      │   ├── assets/
+      │   ├── main.ts
+      │   ├── index.html
+      │   ├── styles.css
+      │   ├── favicon.ico
+      ├── backend
+      │   ├── models.py
+      │   ├── app.py
+      │   ├── .env
+      │   ├── db_setup.sql
+      │   ├── db_cleanup.sql
+      │   ├── Earthquakes.geojson
+      ├── node_modules/
+      ├── angular.json
+      ├── tsconfig.json
+      ├── tsconfig.spec.json
+      ├── tsconfig.app.json
+      └── package.json
 ## Backend
 Backend is a REST API developed in Python3 utilizing Flask API
 ### Setup
