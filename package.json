@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "frontend:test": "ng test",
-    "backend": "py backend/app.py",
-    "backend:test": "py -m unittest discover -s backend"
+    "backend": "python backend/app.py",
+    "backend:test": "python -m unittest discover -s backend"
     
   },
   "private": true,
