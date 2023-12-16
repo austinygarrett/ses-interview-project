@@ -1,0 +1,90 @@
+<h2 mat-dialog-title>Earthquake Data</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>ID: {{data.id}}</h3>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>Date</td>
+                <td>{{data.date}}</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td>{{data.time}}</td>
+            </tr>
+            <tr>
+                <td>Latitude</td>
+                <td>{{data.latitude}}</td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td>{{data.longitude}}</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>{{data.type}}</td>
+            </tr>
+            <tr>
+                <td>Depth</td>
+                <td>{{data.depth}}</td>
+            </tr>
+            <tr>
+                <td>Depth Error</td>
+                <td>{{data.depth_error}}</td>
+            </tr>
+            <tr>
+                <td>Depth Seismic Stations</td>
+                <td>{{data.depth_seismic_stations}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude</td>
+                <td>{{data.magnitude}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Type</td>
+                <td>{{data.magnitude_type}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Error</td>
+                <td>{{data.magnitude_error}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Seismic Stations</td>
+                <td>{{data.magnitude_seismic_stations}}</td>
+            </tr>
+            <tr>
+                <td>Azimuthal Gap</td>
+                <td>{{data.azimuthal_gap}}</td>
+            </tr>
+            <tr>
+                <td>Horizontal Distance</td>
+                <td>{{data.horizontal_distance}}</td>
+            </tr>
+            <tr>
+                <td>Horizontal Error</td>
+                <td>{{data.horizontal_error}}</td>
+            </tr>
+            <tr>
+                <td>Root Mean Square</td>
+                <td>{{data.root_mean_square}}</td>
+            </tr>
+            <tr>
+                <td>Source</td>
+                <td>{{data.source}}</td>
+            </tr>
+            <tr>
+                <td>Location Source</td>
+                <td>{{data.location_source}}</td>
+            </tr>
+            <tr>
+                <td>Magnitude Source</td>
+                <td>{{data.magnitude_source}}</td>
+            </tr><tr>
+                <td>Status</td>
+                <td>{{data.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

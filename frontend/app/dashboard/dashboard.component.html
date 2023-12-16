@@ -1,0 +1,38 @@
+<div class="p-4">
+  <div class="dashboard-top-data">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{dashboardData.total}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Total Earthquakes</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{dashboardData.magMax}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Highest Magnitude</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{dashboardData.depthMax}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Highest Depth</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{dashboardData.depthAvg}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Average Depth</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <dashboard-map></dashboard-map>
+  <mag-chart></mag-chart>
+</div>

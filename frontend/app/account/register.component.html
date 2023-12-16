@@ -1,0 +1,28 @@
+<div class="container" style="max-width: 25%; min-width: 25%; padding-top: 10%">
+    <mat-card>
+        <mat-card-content>
+            <span *ngIf="registrationError" class="error-msg">Error occurred during registration.</span>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <mat-form-field style="width: 100%;">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="mb-3">
+                    <mat-form-field style="width: 100%">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button color="primary" [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                        Register
+                    </button>
+                    <a mat-raised-button color="basic" style="float: right" routerLink="../login" class="btn btn-link">Cancel</a>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

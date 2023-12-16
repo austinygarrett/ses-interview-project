@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-color: #e0e2ec7e;
+}
+
+
+.p-4 {
+  background-color: #e0e2ec7e;
+}
+.mat-mdc-paginator-container {
+  background-color: #e0e2ec7e;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  padding: 0 1rem;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  padding-top: 3.5rem;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 4rem;
+  }
+
+  .entry {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+mat-sidenav-content {
+  padding-top: 3.5rem;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 4rem;
+  }
+}
+
+tr:hover {
+  background-color: rgb(184, 189, 250);
+}
+
+.map-container {
+  display:flex;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.map-frame {
+
+  height: 500px;
+  width: 98%;
+}
+
+#map {
+  height: 100%;
+}
+
+#chart-card {
+  margin-top: 30px;
+}
+
+.dashboard-top-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboard-top-data>mat-card {
+  width: 400px;
+  align-items: center;
+}
+
+.mat-mdc-card-title {
+  font-size: 30px !important;
+}
+
+.chart-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container {
+  height: 300px  !important;
+  width: 90% !important;
+}
+
+#map-card {
+  margin-top: 30px;
+}
+#map-controls-content {
+  margin-top: 30px;
+}
+mat-card-title {
+  font-weight: bolder;
+}
+
+mat-card-content {
+  font-weight: bolder;
+}
+
+.mat-mdc-paginator {
+  background-color: #fafafa !important;
+}
+.custom-padding {
+  padding-right: 20px;
+}
+
+#year-slider {
+  width: 60%;
+}
+
+.time-width {
+  max-width: 75px;
+  margin-right: 10px
+}
+
+mat-form-field {
+  margin-right: 10px;
+}
+
+.mat-delete {
+  background-color: rgb(219, 21, 14) !important;
+  color: #fff !important;;
+}
+
+.mat-add {
+  background-color: rgb(0, 189, 25) !important;
+  color: #fff !important;;
+}
+
+.nav-item {
+  color: #3f51b5 !important;
+}
+
+.nav-item.active> .entry {
+  background-color: #3f51b5 !important;
+  color: white !important;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+}
+
+.error-msg {
+  color:rgb(244 67 54)
+}

@@ -1,0 +1,51 @@
+<div class="p-4">
+    <div class="">
+        <h1>Earthquake Data <a mat-raised-button color="add" routerLink="add" class="btn btn-sm btn-success mb-2" style="float: right">Add Data</a></h1>
+        <mat-paginator [length]="totalCount" [pageSize]="50" (page)="onPaginateChange($event)"></mat-paginator>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th id="id-header">ID</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th id="lat-header">Latitude</th>
+                    <th>Longitude</th>
+                    <th>Magnitude</th>
+                    <th>Source</th>
+                    <th>Location Source</th>
+                    <th>Magnitude Source</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let eq of earthquakes">
+                    <td (click)="viewData(eq.id)">{{eq.id}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.date}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.time}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.latitude}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.longitude}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.magnitude}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.source}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.location_source}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.magnitude_source}}</td>
+                    <td (click)="viewData(eq.id)">{{eq.status}}</td>
+                    <td style="white-space: nowrap">
+                        <a routerLink="edit/{{eq.id}}" mat-raised-button color="primary" class="me-1">Edit</a>
+                        <button (click)="deleteData(eq.id)" mat-raised-button color="delete" style="width: 58px"
+                            [disabled]="eq.isDeleting">
+                            <span *ngIf="eq.isDeleting" class="spinner-border spinner-border-sm"></span>
+                            <span *ngIf="!eq.isDeleting">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="!earthquakes">
+                    <td colspan="10" class="text-center">
+                        <span class="spinner-border spinner-border-lg align-center"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

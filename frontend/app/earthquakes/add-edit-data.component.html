@@ -1,0 +1,155 @@
+<div class="p-4">
+    <div class="">
+        <h1>{{title}}</h1>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>ID</mat-label>
+                        <input matInput formControlName="id">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Status</mat-label>
+                        <input matInput formControlName="status">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput formControlName="date" [matDatepicker]="datepicker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datepicker>
+                            <mat-datepicker-actions>
+                                <button mat-button matDatepickerCancel>Cancel</button>
+                                <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                            </mat-datepicker-actions>
+                        </mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field class="time-width">
+                        <mat-label>HH</mat-label>
+                        <input formControlName="hours" matInput type="number" min="0" max="23" placeholder="" value="">
+                    </mat-form-field>
+                    <span class="time-width"><b>:</b></span>
+                    <mat-form-field class="time-width">
+                        <mat-label>MM</mat-label>
+                        <input formControlName="minutes" matInput type="number" min="0" max="59" placeholder="" value="">
+                    </mat-form-field>
+                    <span class="time-width"><b>:</b></span>
+                    <mat-form-field class="time-width">
+                        <mat-label>SS</mat-label>
+                        <input formControlName="seconds" matInput type="number" min="0" max="59" placeholder="" value="">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Latitude</mat-label>
+                        <input matInput formControlName="latitude" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Longitude</mat-label>
+                        <input formControlName="longitude" matInput type="number" placeholder="" value="0.0">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Depth</mat-label>
+                        <input formControlName="depth" matInput type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Depth Error</mat-label>
+                        <input matInput formControlName="depth_error" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Depth Seismic Stations</mat-label>
+                        <input matInput formControlName="depth_seismic_stations" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Magnitude</mat-label>
+                        <input matInput formControlName="magnitude" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Magnitude Error</mat-label>
+                        <input matInput formControlName="magnitude_error" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Magnitude Seismic Stations</mat-label>
+                        <input matInput formControlName="magnitude_seismic_stations" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Magnitude Type</mat-label>
+                        <input matInput formControlName="magnitude_type" placeholder="" value="">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Azimuthal Gap</mat-label>
+                        <input matInput formControlName="azimuthal_gap" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Horizontal Distance</mat-label>
+                        <input matInput formControlName="horizontal_distance" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Horizontal Error</mat-label>
+                        <input matInput formControlName="horizontal_error" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Root Mean Square</mat-label>
+                        <input matInput formControlName="root_mean_square" type="number" placeholder="" value="0.0">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <mat-form-field>
+                        <mat-label>Source</mat-label>
+                        <input formControlName="source" matInput placeholder="" value="">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Location Source</mat-label>
+                        <input formControlName="location_source" matInput placeholder="" value="">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <mat-label>Magnitude Source</mat-label>
+                        <input matInput formControlName="magnitude_source" placeholder="" value="">
+                    </mat-form-field>  
+                </div>
+            </div>
+            <div class="mb-3">
+                <button style="margin-right: 15px" [disabled]="submitting" mat-raised-button color="primary">
+                    <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+                    Save
+                </button>
+                <a mat-raised-button color="basic" routerLink="/earthquakes" class="btn btn-link">Cancel</a>
+            </div>
+        </form>
+        <div *ngIf="loading" class="text-center m-5">
+            <span class="spinner-border spinner-border-lg align-center"></span>
+        </div>
+    </div>
+</div>
