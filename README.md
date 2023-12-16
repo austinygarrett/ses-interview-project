@@ -74,20 +74,28 @@ Default port for server is port 5432
     ```
     psql --version
     ```
-1. Install PostGIS extension (available using StackBuilder under `Spatial Extensions > PostGIS Bundle for PostgresSQL`)
-1. Run SQL script to initialize database and database user.
+1. Install PostGIS extension (available using StackBuilder under `Spatial Extensions > PostGIS Bundle for PostgresSQL`). If using MacOS PostGIS is included with Postgres.app installation.
+1. Run SQL script to initialize database and database user. Example using default postgres user.
     ```
-    psql -U <username> -f ./backend/db_setup.sql 
+    psql -U postgres -f ./backend/db_setup.sql 
     ```
 1. Now run the db_init.py script from the root folder to populate data into the database.
  
-    *ensure correct  python virtual environment is activated if using one
+    *ensure correct python virtual environment is activated if using one
     ```
-    py ./backend/init_db.py
+    python ./backend/init_db.py
     ```
 ### Database Cleanup
 To clean up and remove data from database run the following SQL script:
 
   ```
-  psql -U <username> -f ./backend/db_cleanup.sql
+  psql -U postgres -f ./backend/db_cleanup.sql
   ```
+
+### Start / Stop Database
+Use pg_ctl to start and stop database. Example using default postgres user.
+  ```
+  pg_ctl -U postgres -D <path to data> start
+  pg_ctl -U postgres -D <path to data> stop
+  ```
+
