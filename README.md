@@ -82,6 +82,7 @@ Database is PostgreSQL with PostGIS extension.
     ```
 ### Database Cleanup
 To clean up and remove data from database run the following SQL script:
-    ```
-    psql -U <username> -f ./backend/db_cleanup.sql
-    ```
+
+  ```
+  psql -U <username> -f ./backend/db_cleanup.sql
+  ```
