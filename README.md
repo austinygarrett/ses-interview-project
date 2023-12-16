@@ -25,14 +25,15 @@
 Backend is a REST API developed in Python3 utilizing Flask API.
 Default port for server is port 5000. You can change the DB URL in `./backend/.env` file
 ### Setup
-1. Install Python3 and check version
+1. Install Python3 and check version. Set alias `python` to `python3` if needed. 
     ```
     python --version
     ```
 1. Create and activate virtaul environment
     ```
     python -m venv <name>
-    source ./<name>/Scripts/activate
+    source ./<name>/Scripts/activate # Windows
+    source ./<name>/bin/activate     # MacOS / Linux
     ```
 1. Install dependencies from requirements.txt file from root directory (may take a minute)
     ```
