@@ -20,8 +20,10 @@
       ├── tsconfig.spec.json
       ├── tsconfig.app.json
       └── package.json
+
 ## Backend
-Backend is a REST API developed in Python3 utilizing Flask API
+Backend is a REST API developed in Python3 utilizing Flask API.
+Default port for server is port 5000. You can change the DB URL in `./backend/.env` file
 ### Setup
 1. Install Python3 and check version
     ```
@@ -47,6 +49,7 @@ Backend is a REST API developed in Python3 utilizing Flask API
 
 ## Frontend
 Frontend was developed using Angular, TypeScript, leaflet, and Material UI libraries
+Default port for server is port 4200
 ### Setup 
 1. Install Node.js and check version
     ```
@@ -60,16 +63,17 @@ Frontend was developed using Angular, TypeScript, leaflet, and Material UI libra
     ```
     npm start
     ```
-1. Access frontend via browser at http://localhost:4200
+1. Access frontend via browser at `http://localhost:4200`
 
 ## Database
-Database is PostgreSQL with PostGIS extension. 
+Database is PostgreSQL with PostGIS extension.
+Default port for server is port 5432
 ### Setup
 1. Install PostgreSQL and check version
     ```
     psql --version
     ```
-1. Install PostGIS extension (available using StackBuilder under Spatial Extensions > PostGIS Bundle for PostgresSQL)
+1. Install PostGIS extension (available using StackBuilder under `Spatial Extensions > PostGIS Bundle for PostgresSQL`)
 1. Run SQL script to initialize database and database user.
     ```
     psql -U <username> -f ./backend/db_setup.sql 
